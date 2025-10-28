@@ -1,9 +1,6 @@
+{ inputs, withSystem, ... }:
 {
-  inputs,
-  withSystem,
-  ...
-}:
-{
+  imports = [ ];
   flake = {
     # TODO: Darwin configuration
     nixosConfigurations =

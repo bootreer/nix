@@ -20,6 +20,10 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-templates = {
+      url = "github:mkienitz/nix-templates";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -31,14 +35,10 @@
         "aarch64-darwin"
         "x86_64-darwin"
       ];
-      imports = [
-        ./lib/hosts.nix
-      ];
+      imports = [ ./lib/hosts.nix ];
       perSystem =
         {
           config,
-          self',
-          inputs',
           pkgs,
           system,
           ...

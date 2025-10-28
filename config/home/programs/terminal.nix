@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       font-family = "JetBrainsMono Nerd Font";
-      font-size = 12;
+      font-size = 11;
       theme = "Kanagawa Wave";
       background-opacity = 0.95;
       shell-integration-features = [

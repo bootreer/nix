@@ -4,7 +4,6 @@
     ./git.nix
     ./tmux.nix
     ./fonts.nix
-    ./ssh.nix
   ];
 
   home.packages = with pkgs; [

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   programs.fish = {
     enable = true;
@@ -18,5 +18,7 @@
       "flakes"
       "pipe-operators"
     ];
+    registry.p.flake = inputs.nixpkgs;
+    registry.t.flake = inputs.nix-templates;
   };
 }
