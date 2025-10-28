@@ -9,9 +9,11 @@
     prefix = "C-Space";
     terminal = "tmux-256color";
     keyMode = "vi";
+    historyLimit = 100000;
 
     plugins = with pkgs; [
       tmuxPlugins.vim-tmux-navigator
+      tmuxPlugins.better-mouse-mode
     ];
 
     extraConfig = ''
@@ -26,6 +28,7 @@
       bind '"' split-window -v -c "#{pane_current_path}"
 
       set -g default-command fish
+      set -g @kanagawa-theme 'wave'
     '';
   };
 }

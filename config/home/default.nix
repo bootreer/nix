@@ -4,9 +4,7 @@
     ./git.nix
     ./tmux.nix
     ./fonts.nix
-    ./terminal.nix
     ./ssh.nix
-    ./firefox
   ];
 
   home.packages = with pkgs; [
@@ -27,5 +25,4 @@
 
   programs.fzf.enable = true;
   programs.bat.enable = true;
-  services.syncthing.enable = true;
 }
