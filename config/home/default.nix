@@ -8,9 +8,11 @@
 
   home.packages = with pkgs; [
     bat
+    eza
     file
     jq
     ripgrep
+    zoxide
   ];
 
   programs.fish = {
@@ -24,4 +26,6 @@
 
   programs.fzf.enable = true;
   programs.bat.enable = true;
+  programs.zoxide.enable = true;
+  programs.eza.enable = true;
 }
