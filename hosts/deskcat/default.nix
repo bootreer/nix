@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -11,6 +11,7 @@
 
   home-manager.users.tuomas.imports = [
     ../../config/home/programs
+    ../../config/home/programs/niri
   ];
 
   programs.steam = {
@@ -20,7 +21,13 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
+  programs.niri.enable = true;
+  environment.systemPackages = with pkgs; [ waypaper ];
+
+  services.gnome.gnome-keyring.enable = true;
+
   networking.hostName = "deskcat";
+
   services.interception-tools = {
     enable = true;
     plugins = [ pkgs.interception-tools-plugins.caps2esc ];

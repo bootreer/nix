@@ -11,7 +11,7 @@
         "ssh-env"
       ];
       window-padding-y = 0;
-      window-decoration = true;
+      window-decoration = false;
     };
   };
 }
