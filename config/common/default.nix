@@ -20,5 +20,11 @@
     ];
     registry.p.flake = inputs.nixpkgs;
     registry.t.flake = inputs.nix-templates;
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+    };
   };
 }

@@ -17,4 +17,43 @@
     x11.enable = true;
   };
   services.polkit-gnome.enable = true;
+
+  programs.noctalia-shell = {
+    enable = true;
+    settings = {
+      bar = {
+        density = "default";
+        position = "top";
+        showCapsule = false;
+        monitors = [ ];
+        widgets = {
+          left = [
+            {
+              id = "SidePanelToggle";
+              useDistroLogo = true;
+            }
+            { id = "WiFi"; }
+            { id = "Bluetooth"; }
+            { id = "ActiveWindow"; }
+          ];
+          right = [
+            { id = "MediaMini"; }
+            { id = "Tray"; }
+            { id = "NotificationHistory"; }
+            { id = "Volume"; }
+            { id = "Clock"; }
+          ];
+        };
+      };
+      colorSchemes.predefinedScheme = "Kanagawa";
+      location = {
+        monthBeforeDay = true;
+        name = "Munich, Germany";
+      };
+      appLauncher = {
+        enableClipboardHistory = true;
+        terminalCommand = "ghostty";
+      };
+    };
+  };
 }

@@ -12,6 +12,7 @@
   home-manager.users.tuomas.imports = [
     ../../config/home/programs
     ../../config/home/programs/niri
+    inputs.noctalia.homeModules.default
   ];
 
   programs.steam = {
@@ -22,7 +23,10 @@
   };
 
   programs.niri.enable = true;
-  environment.systemPackages = with pkgs; [ waypaper ];
+  environment.systemPackages = with pkgs; [
+    waypaper
+    inputs.noctalia.packages.${system}.default
+  ];
 
   services.gnome.gnome-keyring.enable = true;
 
