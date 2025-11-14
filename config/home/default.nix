@@ -22,6 +22,7 @@
   programs.neovim = {
     enable = true;
     vimdiffAlias = true;
+    defaultEditor = true;
   };
 
   programs.fzf.enable = true;

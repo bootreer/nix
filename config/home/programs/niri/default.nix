@@ -47,13 +47,14 @@
       };
       colorSchemes.predefinedScheme = "Kanagawa";
       location = {
-        monthBeforeDay = true;
+        monthBeforeDay = false;
         name = "Munich, Germany";
       };
       appLauncher = {
         enableClipboardHistory = true;
         terminalCommand = "ghostty";
       };
+      dock.enabled = false;
     };
   };
 }

@@ -1,16 +1,17 @@
 { pkgs, ... }:
 {
-  imports = [
-    ../common
-  ];
+  imports = [ ../common ];
 
-  environment.systemPackages = with pkgs; [
-    vim
-  ];
+  environment.systemPackages = with pkgs; [ vim ];
 
   programs.git.enable = true;
   services.openssh = {
     enable = true;
+    settings.KexAlgorithms = [
+      "sntrup761x25519-sha512"
+      "sntrup761x25519-sha512@openssh.com"
+      "mlkem768x25519-sha256"
+    ];
   };
 
   security.polkit.enable = true;
@@ -22,10 +23,7 @@
   };
 
   i18n.defaultLocale = "en_US.UTF-8";
-  services.xserver.xkb = {
-    options = "ctrl:swapcaps";
-    layout = "eu";
-  };
+  services.xserver.xkb.layout = "eu";
 
   console.useXkbConfig = true;
 

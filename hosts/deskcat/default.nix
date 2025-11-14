@@ -25,7 +25,7 @@
   programs.niri.enable = true;
   environment.systemPackages = with pkgs; [
     waypaper
-    inputs.noctalia.packages.${system}.default
+    inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
   ];
 
   services.gnome.gnome-keyring.enable = true;

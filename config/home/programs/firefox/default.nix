@@ -38,6 +38,8 @@
         "extensions.autoDisableScopes" = 0;
         "extensions.update.autoUpdateDefault" = false;
         "extensions.update.enabled" = false;
+
+        "browser.profiles.enabled" = true;
       };
       extensions = import ./extensions.nix { inherit pkgs; };
     };
@@ -48,8 +50,7 @@
         inherit (profiles.default.extensions) settings force;
         packages = [
           pkgs.nur.repos.rycee.firefox-addons.onepassword-password-manager
-        ]
-        ++ profiles.default.extensions.packages;
+        ] ++ profiles.default.extensions.packages;
       };
     };
   };
