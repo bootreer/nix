@@ -25,13 +25,11 @@
         density = "default";
         position = "top";
         showCapsule = false;
+        outerCorners = false;
         monitors = [ ];
         widgets = {
           left = [
-            {
-              id = "SidePanelToggle";
-              useDistroLogo = true;
-            }
+            { id = "ControlCenter"; }
             { id = "WiFi"; }
             { id = "Bluetooth"; }
             { id = "ActiveWindow"; }
@@ -45,6 +43,9 @@
           ];
         };
       };
+      general = {
+        enableShadows = false;
+      };
       colorSchemes.predefinedScheme = "Kanagawa";
       location = {
         monthBeforeDay = false;
@@ -55,6 +56,11 @@
         terminalCommand = "ghostty";
       };
       dock.enabled = false;
+      wallpaper = {
+        enabled = true;
+        directory = "~/Wallpapers/wallps";
+        recursiveSearch = true;
+      };
     };
   };
 }

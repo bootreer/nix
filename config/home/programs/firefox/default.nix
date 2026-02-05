@@ -50,7 +50,8 @@
         inherit (profiles.default.extensions) settings force;
         packages = [
           pkgs.nur.repos.rycee.firefox-addons.onepassword-password-manager
-        ] ++ profiles.default.extensions.packages;
+        ]
+        ++ profiles.default.extensions.packages;
       };
     };
   };

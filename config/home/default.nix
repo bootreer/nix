@@ -29,4 +29,9 @@
   programs.bat.enable = true;
   programs.zoxide.enable = true;
   programs.eza.enable = true;
+
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper.enable = true;
+  };
 }
